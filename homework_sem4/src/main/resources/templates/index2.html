@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="/static/style2.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Медицинская карта </h1>
+<h2>Данные пациента</h2>
+
+<table>
+    <tr>
+        <th>Имя</th>
+        <th>Фамилия</th>
+        <th>Возраст</th>
+        <th>Адрес</th>
+        <th>Номер телефона</th>
+        <th>Электронный адрес</th>
+
+
+    </tr>
+    <tr th:each="p: ${patients}" >
+        <td th:text="${p.name}"></td>
+        <td th:text="${p.surname}"></td>
+        <td th:text="${p.age}"></td>
+        <td th:text="${p.address}"></td>
+        <td th:text="${p.phone}"></td>
+        <td th:text="${p.email}"></td>
+    </tr>
+</table>
+
+<h2>Ввести данные пациента</h2>
+<form action="/patients" method="post">
+    Имя: <input type="text" name="name"><br />
+    Фамилия: <input type="text" name="surname"><br />
+    Возраст: <input type="number" name="age"><br />
+    Адрес: <input type="text" name="address"><br />
+    Номер телефона: <input type="text" name="phone"><br />
+    Электронный адрес: <input type="text" name="email"><br />
+    <button type="submit">Добавить пациента</button>
+</form>
+</body>
+</html>l>

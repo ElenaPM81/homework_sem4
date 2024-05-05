@@ -1,0 +1,12 @@
+body {
+    background-color: #000119;
+    display: grid;
+    font-family: sans-serif;
+    place-items: center;
+  }
+  h1 {
+    background-clip: text;
+    background-image: linear-gradient(to right, #09f1b8, #00a2ff, #ff00d2, #fed90f);
+    font-size: 100px;
+    -webkit-text-stroke: transparent 6px;
+  }
